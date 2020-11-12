@@ -1,0 +1,4 @@
+
+@posts.map do |post|
+  render partial: "post.json.jb", locals: { post: post }
+end
