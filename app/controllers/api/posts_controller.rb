@@ -42,5 +42,3 @@ class Api::PostsController < ApplicationController
     render json: { message: "Post successfully destroyed!" }
   end
 end
-
-end
