@@ -1,6 +1,4 @@
 class Api::PostsController < ApplicationController
-  before_action :authenticate_user, except: [:index, :show]
-
   def index
     @posts = Post.all
     render "index.json.jb"
@@ -11,7 +9,7 @@ class Api::PostsController < ApplicationController
       title: params[:title],
       body: params[:body],
       image: params[:image],
-      user_id: current_user.id,
+
     )
     if @post.save
       render "show.json.jb"
